@@ -15,6 +15,8 @@
 		AA26C14F1D565B0E00E03F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA26C14E1D565B0E00E03F59 /* Assets.xcassets */; };
 		AA26C1521D565B0E00E03F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA26C1501D565B0E00E03F59 /* LaunchScreen.storyboard */; };
 		AA26C15B1D565C5900E03F59 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA26C15A1D565C5900E03F59 /* Spotify.framework */; };
+		AA26C15F1D565EC700E03F59 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA26C15E1D565EC700E03F59 /* AVFoundation.framework */; };
+		AA26C1611D565ED100E03F59 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA26C1601D565ED100E03F59 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AA26C1511D565B0E00E03F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA26C1531D565B0E00E03F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA26C15A1D565C5900E03F59 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		AA26C15E1D565EC700E03F59 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AA26C1601D565ED100E03F59 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA26C1611D565ED100E03F59 /* SystemConfiguration.framework in Frameworks */,
+				AA26C15F1D565EC700E03F59 /* AVFoundation.framework in Frameworks */,
 				AA26C15B1D565C5900E03F59 /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +93,8 @@
 		AA26C1591D565C5900E03F59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA26C1601D565ED100E03F59 /* SystemConfiguration.framework */,
+				AA26C15E1D565EC700E03F59 /* AVFoundation.framework */,
 				AA26C15A1D565C5900E03F59 /* Spotify.framework */,
 			);
 			path = Frameworks;
@@ -301,6 +309,7 @@
 				);
 				INFOPLIST_FILE = SpotifySDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.barragan.SpotifySDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -316,6 +325,7 @@
 				);
 				INFOPLIST_FILE = SpotifySDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.barragan.SpotifySDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
